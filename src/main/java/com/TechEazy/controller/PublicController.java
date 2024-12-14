@@ -1,27 +1,27 @@
 package com.TechEazy.controller;
 
-import com.TechEazy.constant.ApplicationConstants;
-import com.TechEazy.model.LoginDto;
-import com.TechEazy.model.Response;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.security.Keys;
-import lombok.RequiredArgsConstructor;
+import java.nio.charset.StandardCharsets;
+import java.util.stream.Collectors;
+
+import javax.crypto.SecretKey;
+
 import org.springframework.core.env.Environment;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
-import org.springframework.security.config.core.GrantedAuthorityDefaults;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.crypto.SecretKey;
-import java.nio.charset.StandardCharsets;
-import java.util.stream.Collectors;
+import com.TechEazy.constant.ApplicationConstants;
+import com.TechEazy.model.LoginDto;
+import com.TechEazy.model.Response;
+
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.security.Keys;
+import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequiredArgsConstructor

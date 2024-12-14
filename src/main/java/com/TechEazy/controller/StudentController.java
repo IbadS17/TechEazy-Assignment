@@ -1,21 +1,15 @@
 package com.TechEazy.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.TechEazy.model.Response;
 import com.TechEazy.model.Student;
-import com.TechEazy.model.Subject;
 import com.TechEazy.repo.SubjectRepo;
 import com.TechEazy.service.StudentService;
-import com.TechEazy.service.SubjectService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.AnonymousAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.Optional;
 
 
 @RestController
