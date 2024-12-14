@@ -6,7 +6,7 @@ public interface SubjectService {
 
     Subject addSubjecttoStudent(String subject);
 
-    Subject addSubject(String name);
+    Subject addSubject(Subject name);
 
 
 }

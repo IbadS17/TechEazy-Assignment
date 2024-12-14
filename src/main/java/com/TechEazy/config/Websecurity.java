@@ -30,8 +30,12 @@ public class Websecurity {
         http.authorizeHttpRequests((requests) ->
                 requests.requestMatchers("/api/student").permitAll()
                         .requestMatchers("/api/login").permitAll()
-                        .requestMatchers("/api/subject").hasRole("STUDENT")
                         .requestMatchers("/h2-console/**").permitAll()
+                        .requestMatchers("/api/getStudent/id").hasRole("ADMIN")
+                        .requestMatchers("/api/subject").hasRole("ADMIN")
+                        .requestMatchers("/api/addstudentTosubject").hasRole("ADMIN")
+                        .requestMatchers("/api/getAllStudents").hasRole("ADMIN")
+                        .requestMatchers("/api/getAllSubject").hasRole("ADMIN")
                         .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
 
         );
